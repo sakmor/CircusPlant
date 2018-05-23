@@ -20,11 +20,11 @@ public class Player : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        IsOnFloor = true;
+        if (other.gameObject.name == "Land") IsOnFloor = true;
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        IsOnFloor = false;
+        if (other.gameObject.name == "Land") IsOnFloor = false;
     }
 }

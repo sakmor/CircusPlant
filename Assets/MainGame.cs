@@ -52,7 +52,7 @@ public class MainGame : MonoBehaviour
 
     private void PlayerKeepMove()
     {
-        Player.transform.localPosition += Vector3.right * Time.deltaTime * PlayerSpeed;
+        PlayerRigidbody2D.velocity = new Vector2(PlayerSpeed, PlayerRigidbody2D.velocity.y);
 
     }
 }
